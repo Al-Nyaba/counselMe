@@ -1,8 +1,7 @@
 <?php
 
-echo "Welcome to the sign in page";
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -10,44 +9,31 @@ echo "Welcome to the sign in page";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sign In</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link href="fontawesome-free-5.10.1-web/css/all.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/custom/master.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="signin.css" />
+    <link href="../fontawesome-free-5.10.1-web/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/custom/master.css" />
     <style media="screen">
     .error {
       color: #f90146;
     }
     </style>
 </head>
-<body>
-    <form action="/examples/actions/confirmation.php" method="post">
-        <h2 class="text-center">Sign in</h2>   
-        <div class="form-group">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                <input type="text" class="form-control" name="username" placeholder="Username" required="required">				
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                <input type="password" class="form-control" name="password" placeholder="Password" required="required">				
-            </div>
-        </div>        
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary login-btn btn-block">Sign in</button>
-        </div>
-        <div class="clearfix">
-            <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
-            <a href="#" class="pull-right">Forgot Password?</a>
-        </div>
-        <div class="or-seperator"><i>or</i></div>
-        <p class="text-center">Login with your social media account</p>
-        <div class="text-center social-btn">
-            <a href="#" class="btn btn-primary"><i class="fa fa-facebook"></i>&nbsp; Facebook</a>
-            <a href="#" class="btn btn-info"><i class="fa fa-twitter"></i>&nbsp; Twitter</a>
-            <a href="#" class="btn btn-danger"><i class="fa fa-google"></i>&nbsp; Google</a>
-        </div>
+<body class="text-center">
+    <form class="form-signin">
+      <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      <div class="checkbox mb-3 text-left">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
     </form>
-</body>
+  </body>
 </html>

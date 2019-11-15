@@ -1,11 +1,6 @@
 <?php
 session_start();
 
-if(isset($_SESSION['user']))
-{
-    // redirect to homepage if the user is already having an active session
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -40,8 +35,6 @@ if(isset($_SESSION['user']))
      </div>
     </nav>
 
-    <?php if($USER_TYPE == 'master') { ?>
-
     <nav id="bottomNav" class="d-none navbar fixed-bottom navbar-expand-lg bg-dark navbar-dark">
        <span class="navbar-brand" data-target="">Home</span>
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bottomNavbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,9 +53,6 @@ if(isset($_SESSION['user']))
        </ul>
      </div>
     </nav>
-
-    <?php } ?>
-
 
     <div class="container-fluid py-5 my-5">
       <div class="row">
