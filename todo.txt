@@ -1,0 +1,2 @@
+learn how to use google location service's javascript api to obtain the location of the user and insert it into the database
+

@@ -1,0 +1,60 @@
+@media print {
+  .table .thead-purple th {
+    color: inherit;
+    border-color: #dee2e6;
+  }
+}
+
+ .bg-purple {
+     background-color: #9d00ff;
+     border: none;
+ }
+
+ .richmorgan-blue {
+   background-color: #0d2182 !important;
+ }
+
+ .bg-error {
+  background-color: #f90146 !important;
+  color: #fff;
+  border: inset 2px solid black;
+ }
+
+ .input-successful {
+   background-color: #037f26;
+   border: 2px solid green;
+ }
+
+ .text-purple {
+   color: #9f00ff;
+ }
+
+ .table .thead-purple th {
+   color: #fff;
+   background-color: #5b0094;
+   border-color: #6600a5;
+ }
+
+/* .error is used for jQuery form validation */
+.error {
+  color: #f90146;
+}
+  #brand-select {
+    display: none;
+  }
+  .has_error {
+    border: 1px solid red;
+  }
+  #serverMessageDiv {
+    display: none;
+  }
+  .invalid_input {
+    display: block;
+    color: red;
+  }
+
+  .validate_input + .invalid_input {
+    background-color: #f21009;
+    color: white;
+    display: none;
+  }
