@@ -32,7 +32,7 @@
           <a href="#" class="nav-link">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a href="book.html" class="nav-link">Book a counsellor</a>
+          <a href="book.php" class="nav-link">Book a counsellor</a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">About</a>
@@ -40,65 +40,18 @@
         <li class="nav-item">
           <a href="#" class="nav-link">Contact Us</a>
         </li>
-        <li class="nav-item"><a href="#login" class="nav-link" data-toggle="modal" data-target="#login">Login/Sign Up</a></li>
+        <li class="nav-item">
+          <a href="login.php" class="nav-link" >Login</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="signup.php" class="nav-link" >Sign Up</a>
+        </li>
       </ul>
     </div>
   </nav>
 
-  <!-- Login Modal -->
-  <div class="modal fade" id="login">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">
-            Please Login
-          </h4>
-          <button type="button" class="close" data-dismiss="modal">
-            &times;
-          </button>
-        </div>
-        <!-- Modal body -->
-        <div class="modal-body">
-            <form action="" method="post" class="form-login">
-                <div class="text-center">
-                    <!-- <h1 class="h3 mb-3 font-weight-normal">Login</h1> -->
-                    <p>Please login to your account to continue.</p>
-                </div>
-        
-                <div class="text-right pr-5">
-                    <p>Not having an account? <a href="#signup">Register Now</a></p>
-                </div>
-        
-                <div class="form-label-group">
-                    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="your email" required="required" autofocus />
-                    <label for="inputEmail">Email address</label>
-                </div>
-        
-                <div class="form-label-group">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" required="required" />
-                    <label for="inputPassword">Password</label>
-                </div>
-        
-                <div class="checkbox mb-3">
-                    <label class="form-check-label">
-                        <input type="checkbox" value="remember-me"> Remember me 
-                    </label>
-                </div>
-                <button id="loginButton" class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-                <p class="mt-5 mb-3 text-muted text-center">Customer Support (Via Telegram)<br/><a href="https://t.me/EcommerceXProject/" class="btn btn-lg"><span class="fa fa-lg fa-telegram"></span></a></p>
-            </form>
-        </div>
-
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">
-            &times;&raquo;
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+  
 
   <!-- Signup Modal -->
   <div>

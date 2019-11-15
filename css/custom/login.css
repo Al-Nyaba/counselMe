@@ -4,9 +4,9 @@
 }
 
 html, body {
-    background-color: #340099;
+    background-color: #ccc;
     height: 100%;
-    color: #fff;
+    color: black;
     font-weight: 700;
 }
 
@@ -17,6 +17,10 @@ body {
     align-items: center;
     padding-top: 40px;
     padding-bottom: 40px;
+}
+form{
+    width:50%;
+    margin:30px auto;
 }
 
 .form-login {
