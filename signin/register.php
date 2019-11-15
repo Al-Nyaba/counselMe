@@ -2,7 +2,7 @@
 
 if(isset($_POST['firstname'])) {
 
-    require("./includes/pdo.php");
+    require("../includes/pdo.php");
     $firstname = isset($_POST['firstname']) ? trim($_POST['firstname']) : '';
     $lastname = isset($_POST['lastname']) ? trim($_POST['lastname']) : '';
     $username = isset($_POST['username']) ? trim($_POST['username']) : '';
@@ -52,7 +52,9 @@ if(isset($_POST['firstname'])) {
     } catch (PDOException $e) {
         $pdo->rollBack();
         $errors[] = "A problem has prevented us from adding you at the moment. We apologize for the incovenice. Please try again in some few minutes.";
-        echo json_encode(array('failure' => $errors));
+        // echo $e->getMessage();
+        // $errors[] = "Error: ";
+        echo json_encode(array('failure' => $errors, $e));
         return false;
     }
 }
