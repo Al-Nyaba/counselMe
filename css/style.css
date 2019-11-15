@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+  	font-family: 'Open Sans', sans-serif;
+   font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+.img-txt{
+	background-image: url(../img/consult.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 200px;
+	padding-bottom: 200px;
+	color: white;
+}
+
+.h1-big-font {
+    font-size: 5rem;
+}
+
+.about-margin{
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.courses{
+  background-color:#e6e6e6;
+  padding-top:50px;
+  padding-bottom: 50px; 
+
+}
+
+.mudi{
+  padding-bottom: 30px;
+}
+
+.igm-pad{
+  padding-bottom: 30px;
+}
+.img-margin{
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.gallery{
+  margin-top: 10px;
+}
+.advanced{
+  background-image: url(../img/coverb.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  color: white;
+  
+}
+li{
+  list-style-type: none;
+}
+
+
+#form-div{
+  width: 50%;
+  margin: 0 auto;
+}

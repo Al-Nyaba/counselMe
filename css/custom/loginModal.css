@@ -1,0 +1,14 @@
+:root {
+    --input-padding-x: .75rem;
+    --input-padding-y: .75rem;
+}
+
+.form-login {
+    padding: 15px;
+    margin: auto;
+}
+
+.form-label-group {
+    position: relative;
+}
+
