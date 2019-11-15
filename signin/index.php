@@ -1,4 +1,7 @@
 <?php
+session_start();
+
+if(isset($_POST['']))
 
 ?>
 
@@ -42,6 +45,7 @@
                 </button>
               </div>
               <div class="modal-body">
+                <!-- sign up form -->
                 <form autocomplete="off" id="user_registration_form" action="../register.php" method="post">
                   <div class="form-group">
                     <label for="firstname">First Name</label>
@@ -99,7 +103,8 @@
           </div>
         </div>
 
-    <form class="form-signin">
+        <!-- sign in form -->
+    <form class="form-signin" name="signin_form" method="POST" action="login.php">
       <img class="mb-4" src="../img/counselMeLogo.png" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
       <p class="no-account h5 mb-3 font-weight-light m-0 p-0"><br />Not having an account, please <br />
@@ -107,9 +112,9 @@
       <br /><br />
       </p>
       <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+      <input type="text" name="username_email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
       <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
       <div class="checkbox mb-3 text-left">
         <label>
           <input type="checkbox" name="rememberMe" value="remember-me"> Remember me
