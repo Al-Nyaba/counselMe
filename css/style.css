@@ -66,3 +66,47 @@ li{
   width: 50%;
   margin: 0 auto;
 }
+
+
+.user-profile{
+  width:50%;
+  margin: 20px auto;
+  border: 2px solid #ccc;
+  padding: 10px;
+  }
+
+  .input-field {
+    margin-top: 20px;
+
+  
+  }
+
+
+  /* admin add counseller styles */
+
+  .form-div{
+    width:70%;
+    margin: 100px auto;
+    /* border: 1px solid black; */
+
+  }
+
+  .form-div-header{
+    font-size:50px;
+    font-weight:20px;
+    background:#ccc;
+    border-radius:20px 20px 0 0;
+  }
+
+  .form-div-footer{
+    /* font-size:30px; */
+    /* font-weight:10px; */
+    height:40px;
+    background:#ccc;
+    border-radius: 0 0 20px 20px;
+    padding:10px;
+  }
+
+
+  
+   /* admin add counseller styles */

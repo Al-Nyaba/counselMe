@@ -13,7 +13,7 @@
     <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/custom/login.css" />
-</body>
+
     <form action="" method="post" class="form-login">
         <div class="text-center">
             <!-- <h1 class="h3 mb-3 font-weight-normal">Login</h1> -->
@@ -84,4 +84,5 @@
     <script src="js/jquery-slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    </body>
 </html>
