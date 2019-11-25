@@ -1,1 +1,1 @@
-just some text
+This is just an ordinary file
