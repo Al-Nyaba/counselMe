@@ -28,7 +28,7 @@ session_start();
                 {
                     $_SESSION['user_type'] = "admin";
                     $_SESSION['admin_id'] = $res['adminID'];
-                    $_SESSION['username'] = $res['username'];
+                    $_SESSION['admin_username'] = $res['username'];
                     header('Location: ./');
                     return;
                 }

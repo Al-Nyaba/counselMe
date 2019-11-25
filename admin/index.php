@@ -1,11 +1,14 @@
 <?php
 session_start();
 
-if(! isset($_SESSION['user_type']) && $_SESSION['user_type'] !== 'Admin')
+
+if(! isset($_SESSION['admin_id']))
 {
-	header('Location: ./login.php');
-	return;
+  echo 'nothing set';
+  header('Location: ./login.php');
+  return;
 }
+
 
 ?>
 
@@ -16,7 +19,7 @@ if(! isset($_SESSION['user_type']) && $_SESSION['user_type'] !== 'Admin')
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="../css/fonts/OpenSans.css" rel="stylesheet">
    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap CSS -->
@@ -45,7 +48,7 @@ if(! isset($_SESSION['user_type']) && $_SESSION['user_type'] !== 'Admin')
           <li class="dropdown">
             <a href="" class="btn btn-outline-warning dropdown-toggle" data-toggle="dropdown">
               <span class="label label-pill label-danger count">
-                <?php echo $_SESSION['username']; ?>
+                <?php echo $_SESSION['admin_username']; ?>
               </span>
             </a>
 
@@ -60,12 +63,32 @@ if(! isset($_SESSION['user_type']) && $_SESSION['user_type'] !== 'Admin')
     </div>
   </nav>
 
-  <div class="container mt-5 pt-5">
-	<h1>Welcome to my world</h1>
+  <div class="container-fluid mt-5 pt-5">
+    <div class="row">
+      <div class="col-sm col-md-9 col-lg-6">
+        <div class="table-responsive">
+          <table id="expertRequestsTable" class="table table-responsive-sm table-lg-hover">
+            <thead class="thead-purple">
+              <tr>
+                <th>Name</th>
+                <th>Payment Method</th>
+                <th>Specialization/Category</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
 
 	<script src="../jquery/jquery-3.4.1.js"></script>
 	<script src="../js/popper.min.js"></script>
 	<script src="../js/bootstrap.js"></script>
+  <script src="../js/jquery.dataTables.min.js"></script>
+  <script src="../jquery/jquery.validate.min.js"></script>
 </body>
 </html>
