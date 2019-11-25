@@ -52,8 +52,9 @@ $("#user_registration_form").submit(function(event){
         $("i#spinner").show();
       },
       success: function (value) {
-        console.log(value);
+        // console.log(value);
         myxhr = JSON.parse(value);
+        console.log(myxhr);
         if(myxhr.hasOwnProperty('success'))
         {
           $('#user_registration_form')[0].reset();
@@ -73,6 +74,7 @@ $("#user_registration_form").submit(function(event){
             $("#spinner").addClass('d-none');
             $("#errorIcon").removeClass('d-none');
             $( "div#new_user_success" ).addClass( "d-none bg-error" );
+            console.log(myxhr.failure);
             $("span#new_user").text(myxhr.failure[0]);
             $("p#errorInfo").text(myxhr.failure[0]);
             $("p#errorInfo").addClass('error');

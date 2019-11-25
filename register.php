@@ -51,7 +51,14 @@ if(isset($_POST['firstname'])) {
         }
     } catch (PDOException $e) {
         $pdo->rollBack();
-        $errors[] = "A problem has prevented us from adding you at the moment. We apologize for the incovenice. Please try again in some few minutes.";
+        // $errors[] = "A problem has prevented us from adding you at the moment. We apologize for the incovenice. Please try again in some few minutes.";
+        $errors[] = $e->errorInfo();
+        if($e->errorCode == '23000') {
+            if(in_array('phone', $errors[0])) {
+                echo json_encode(array('failure' => "An error occured."));
+                // echo json_encode(array('failure' => var_dump($e)));
+            }
+        }
         echo json_encode(array('failure' => $errors));
         return false;
     }

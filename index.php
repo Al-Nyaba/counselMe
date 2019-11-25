@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,8 +10,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-       <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+   <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css" >
@@ -17,8 +21,6 @@
     <link rel="stylesheet" href="css/style.css" >
     <!-- custom -->
     <link rel="stylesheet" href="css/custom/loginModal.css" />
-
-
 
   </head>
   <body>
@@ -34,20 +36,37 @@
         <li class="nav-item">
           <a href="book.php" class="nav-link">Book a counsellor</a>
         </li>
+        <?php if (! isset($_SESSION['userInfo'])) { ?>
+          <li class="nav-item">
+            <a href="./signin" class="nav-link" >Login/Sign up</a>
+          </li>
+        <?php } ?>
         <li class="nav-item">
           <a href="#" class="nav-link">About</a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">Contact Us</a>
         </li>
-        <li class="nav-item">
-          <a href="login.php" class="nav-link" >Login</a>
-        </li>
-
-        <li class="nav-item">
-          <a href="signup.php" class="nav-link" >Sign Up</a>
-        </li>
       </ul>
+
+      <?php if (isset($_SESSION['userInfo'])) {?>
+      <!-- profile dropdown toggle -->
+      <ul class="nav navbar-nav ml-auto">
+          <li class="dropdown">
+            <a href="" class="btn btn-outline-warning dropdown-toggle" data-toggle="dropdown">
+              <span class="label label-pill label-danger count">
+                <?php echo $_SESSION['username']; ?>
+              </span>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a href="./profile/" class="dropdown-item">Profile</a></li>
+              <div class="dropdown-divider"></div>
+              <li><a href="logout.php" class="dropdown-item">Logout</a></li>
+            </ul>
+          </li>
+      </ul>
+      <?php } ?>
     </div>
   </nav>
 
@@ -229,9 +248,7 @@
 
 
 
-<!-- What you can learn section -->
-
-    <!-- Optional JavaScript
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-slim.min.js"></script>
     <script src="js/popper.min.js"></script>
