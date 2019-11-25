@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 25, 2019 at 05:30 PM
+-- Generation Time: Nov 25, 2019 at 05:40 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.2.21
 
@@ -170,7 +170,7 @@ CREATE TABLE `experts` (
   `expertID` int(11) NOT NULL,
   `userID` int(11) DEFAULT NULL,
   `rating` float(5,2) UNSIGNED DEFAULT NULL,
-  `dateAdded` int(11) NOT NULL DEFAULT current_timestamp(),
+  `dateAdded` datetime NOT NULL DEFAULT current_timestamp(),
   `category` int(11) DEFAULT NULL,
   `verified` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
