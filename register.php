@@ -55,7 +55,7 @@ if(isset($_POST['firstname'])) {
         $errors[] = $e->errorInfo();
         if($e->errorCode == '23000') {
             if(in_array('phone', $errors[0])) {
-                echo json_encode(array('failure' => "Your phone number belongs to some other account. Please report to " . '<a href="mailto:nyavowoyiernest@gmail.com">administrator</a> if you want to register with the same number"))';
+                echo json_encode(array('failure' => "An error occured."));
                 // echo json_encode(array('failure' => var_dump($e)));
             }
         }
